@@ -56,12 +56,12 @@ is no arbitrary artifact-URL field. The remote reader derives the URL from
 size must be positive. An artifact's internal `naatik.toml` is a separate package
 manifest. Do not invent a release entry, size, checksum or artifact in this skeleton.
 
-Publication is not configured. The current Na'atik remote constructor strips a
-trailing slash and uses standard relative URL resolution. A base URL containing
-a path prefix consequently resolves these relative requests at its parent path.
-Do not assume a future GitHub source repository URL or path-prefixed static site
-is directly consumable. Qualify hosting/base-URL behavior separately before
-registering the repository; do not work around it by inventing metadata fields.
+Publication is not configured. PR-0139 Stage 1 fixed Na'atik's repository URL
+resolution to preserve configured path prefixes and reject relative paths that
+escape the base. A future public static repository base still needs validation
+by retrieving repository.toml and packages/index.txt after publication. A GitHub
+source repository URL is not itself a confirmed static catalog base. No hosting
+URL is assigned here, and no new metadata fields are needed.
 
 ## License and provenance
 
