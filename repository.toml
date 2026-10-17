@@ -1,0 +1,9 @@
+schema = 1
+
+[repository]
+id = "naatik-nahuatl"
+display_name = "Na'atik Nahuatl Language Repository"
+description = "Curated Na'atik packages and approved resources for Nahuatl language support."
+
+[metadata]
+maintainer = "Alx Hndz"
