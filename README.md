@@ -2,8 +2,15 @@
 
 Curated Na’atik packages and approved resources for Nahuatl language support.
 
-Status: repository skeleton only; zero published packages. No remote or public
-repository is configured.
+Status: published official umbrella catalog; zero published packages.
+Canonical static catalog base:
+https://raw.githubusercontent.com/ElpincheAlx/Naatik-Nahuatl/main/
+
+PR-0139 Stage 4B externally validated this repository's identity, empty index
+and normal empty-catalog behavior. In Na'atik use **Configuración guiada →
+Náhuatl → Agregar repositorio**. No package install action is offered. This is
+static catalog hosting, not a GitHub Release or production language provider.
+These local documentation changes do not publish anything.
 
 ## Language profiles — not implemented
 
@@ -39,7 +46,8 @@ packages/
 
 `repository.toml` requires `schema = 1`, `[repository].id` and
 `[repository].display_name`. It also supports repository `description` and
-optional `[metadata].maintainer` / `homepage`. No hosting URL is assigned here.
+optional `[metadata].maintainer` / `homepage`. The confirmed static base above is maintained centrally in Na'atik, not added
+as an unsupported metadata field.
 
 `packages/index.txt` is intentionally zero bytes. The HTTP reader accepts blank
 lines/comments and one repository-root-relative release metadata path per entry.
@@ -56,12 +64,12 @@ is no arbitrary artifact-URL field. The remote reader derives the URL from
 size must be positive. An artifact's internal `naatik.toml` is a separate package
 manifest. Do not invent a release entry, size, checksum or artifact in this skeleton.
 
-Publication is not configured. PR-0139 Stage 1 fixed Na'atik's repository URL
+The official catalog is published. PR-0139 Stage 1 fixed Na'atik's repository URL
 resolution to preserve configured path prefixes and reject relative paths that
-escape the base. A future public static repository base still needs validation
-by retrieving repository.toml and packages/index.txt after publication. A GitHub
-source repository URL is not itself a confirmed static catalog base. No hosting
-URL is assigned here, and no new metadata fields are needed.
+escape the base. PR-0139 Stage 4B validated the static base by retrieving repository.toml and
+the zero-byte packages/index.txt. Recheck connectivity when qualifying a new
+distribution; historical public validation is not a fresh network check. A GitHub
+source repository URL is not itself a confirmed static catalog base. No new metadata fields are needed; use the confirmed raw base above.
 
 ## License and provenance
 
