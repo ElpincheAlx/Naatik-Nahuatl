@@ -67,8 +67,8 @@ manifest. Do not invent a release entry, size, checksum or artifact in this skel
 The official catalog is published. PR-0139 Stage 1 fixed Na'atik's repository URL
 resolution to preserve configured path prefixes and reject relative paths that
 escape the base. PR-0139 Stage 4B validated the static base by retrieving repository.toml and
-the zero-byte packages/index.txt. Recheck connectivity when qualifying a new
-distribution; historical public validation is not a fresh network check. A GitHub
+the zero-byte packages/index.txt. Fedora qualification of Na'atik be8f24c subsequently confirmed public discovery
+and normal empty-catalog behavior again (reviewed official-setup.log). A GitHub
 source repository URL is not itself a confirmed static catalog base. No new metadata fields are needed; use the confirmed raw base above.
 
 ## License and provenance
